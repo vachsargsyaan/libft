@@ -6,7 +6,7 @@
 #    By: vacsargs <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/29 16:38:11 by vacsargs          #+#    #+#              #
-#    Updated: 2023/02/03 20:48:46 by vacsargs         ###   ########.fr        #
+#    Updated: 2023/02/03 21:13:55 by vacsargs         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,8 @@ SRC_A	= 		ft_atoi.c \
 				ft_striteri.c\
 				ft_putchar_fd.c \
 				ft_putstr_fd.c \
-				ft_putendl_fd.c 
+				ft_putendl_fd.c\
+			    ft_putnbr_fd.c	
 SRC_B	= ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \

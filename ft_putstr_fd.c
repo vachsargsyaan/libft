@@ -6,7 +6,7 @@
 /*   By: vacsargs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 16:42:58 by vacsargs          #+#    #+#             */
-/*   Updated: 2023/01/28 16:47:02 by vacsargs         ###   ########.fr       */
+/*   Updated: 2023/02/04 15:19:02 by vacsargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,14 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	write (fd, s++, 1);
+	int	i;
+
+	if (!s)
+		return ;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		write (fd, &s[i], 1);
+		i++;
+	}
 }
