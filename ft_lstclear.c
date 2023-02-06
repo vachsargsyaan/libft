@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vacsargs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/16 21:20:21 by vacsargs          #+#    #+#             */
-/*   Updated: 2023/01/16 21:24:40 by vacsargs         ###   ########.fr       */
+/*   Created: 2023/02/06 18:56:38 by vacsargs          #+#    #+#             */
+/*   Updated: 2023/02/06 19:48:08 by vacsargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int ascii)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	return ((ascii > 31 && ascii < 127));
+	t_list	*i;
+
+	if (!lst || !del)
+		return ;
+	while (*lst)
+	{
+		i = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = i;
+	}
+	*lst = NULL;
 }

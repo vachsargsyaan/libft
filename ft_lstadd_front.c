@@ -1,35 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vacsargs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/18 14:31:21 by vacsargs          #+#    #+#             */
-/*   Updated: 2023/01/30 18:23:14 by vacsargs         ###   ########.fr       */
+/*   Created: 2023/02/06 15:26:17 by vacsargs          #+#    #+#             */
+/*   Updated: 2023/02/06 15:42:12 by vacsargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void	*dst, const void	*src, size_t	len)
+void	ft_lstadd_front(t_list	**lst, t_list	*new)
 {
-	unsigned char	*srt;
-	unsigned char	*vip;
-
-	if (!dst && !src)
-		return (NULL);
-	if ((dst == 0 && src == 0) || len == 0)
-		return (dst);
-	srt = (unsigned char *) dst;
-	vip = (unsigned char *) src;
-	if (dst == src)
-		return (dst);
-	if (srt < vip)
-		while (len--)
-			*srt++ = *vip++;
-	else
-		while (len--)
-			srt[len] = vip[len];
-	return (dst);
+	if (!lst || !new)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }

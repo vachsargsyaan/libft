@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vacsargs <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/04 16:48:20 by vacsargs          #+#    #+#             */
-/*   Updated: 2023/02/06 15:45:12 by vacsargs         ###   ########.fr       */
+/*   Created: 2023/02/06 20:16:47 by vacsargs          #+#    #+#             */
+/*   Updated: 2023/02/06 20:16:50 by vacsargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
 {
-	t_list	*p;
-
-	p = (t_list *)malloc(sizeof(t_list));
-	if (!p)
-		return (NULL);
-	p->content = content;
-	p->next = NULL;
-	return (p);
+	
 }
+
