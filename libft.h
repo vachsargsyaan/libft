@@ -6,7 +6,7 @@
 /*   By: vacsargs <vacsargs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 17:24:02 by vacsargs          #+#    #+#             */
-/*   Updated: 2023/02/07 17:29:06 by vacsargs         ###   ########.fr       */
+/*   Updated: 2023/02/07 20:56:34 by vacsargs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ t_list	*ft_lstlast(t_list *lst);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-char	*strnstr(const char *hay, const char *need, size_t len);
 
 char	*ft_strnstr(const char *hay, const char *need, size_t len);
 int		ft_atoi(const char *str);
